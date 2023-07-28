@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f06bc0af44.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+      <div class="container">
+        <nav>
+            <img src="sathwi logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#portfolio">portifilo</a></li>
+                <li><a href="#contact">contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Designer</p>
+            <h1>Hi,I'm <span>Sathwick</span><br> from India</h1>
+        </div>
+      </div>  
+    </div>
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="my_pic-removebg-preview.png">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub">About me</h1>
+            <p>
+                Description
+            </p>
+            </p>
+
+              objective seeking a job in a progessive company that allows me use and strengthen my inter personal skills acedamic knowledge and
+              experience
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('Skills')">skills</p>
+              <p class="tab-links" onclick="opentab('experience')">experience</p>
+              <p class="tab-links" onclick="opentab('Education')">education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li><span>Design</span><br> wedpage</li>
+                <li><span>java</span><br> Developer</li>
+                <li><span>Front-end</span><br>programmer</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+              
+                <li><span>12 months learn experience on java</span><br></li>
+                <li><span>6 months learn experience on Iot</span><br></li>
+                <li><span>24 months learn experience on python</span><br></li>
+
+                
+              </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li><span>2024</span><br>Btech from Kkr and Ksr Institute of Technology and Sciences(Guntur)</li>
+                <li><span>2020</span><br>Intermediate from Vignana Bharathi junior college(Chirala)</li>
+                <li><span>2018</span><br>Marticulation from Sri Chaithanya School(Chirala) </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="services">
+      <div class="container">
+        <h1 class="sub">my services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>wed designer</h2>
+            <p>adout the web</p>
+            <a href="https://webdesigner.withgoogle.com/">learn more</a>
+            <img src="kokok-removebg-preview.png" class="Icon">
+            
+          </div>
+          <div>
+            <i class="fa-sharp fa-solid fa-crop"></i>
+            <h2>python</h2>
+            <p>adout the web</p>
+            <a href="https://www.javatpoint.com/">learn more</a>
+            <img src="python_lang-removebg-preview.png" class="Icon">
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store-ios"></i>
+            <h2>JAVA</h2>
+            <p>adout the JAVA</p>
+            <a href="https://www.javatpoint.com/">learn more</a>
+            <img src="java_lang-removebg5258.png" class="Icon">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+       <div id="portfolio">
+        <div class="container">
+          <h1 class="sub">my work</h1>
+          <div class="work-list">
+            <div class="work">
+             
+            </div>
+            <div class="work">
+              
+            </div>
+            <div class="work">
+             
+            </div>
+          </div>
+          <a href="#" class="btn">see more</a>
+        </div>
+       </div>
+
+
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub"> contact me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i>sathwickkummari@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 9392880898</p>
+        <div class="social-icon">
+            <a href=""><i class="fa-brands fa-linkedin"></i> https://www.linkedin.com/in/sathwick-kummari-583801218 </a>
+            <a href=""><i class="fa-brands fa fa-github"></i> https://github.com/kummarisathwick </a>
+        </div>
+        <a href="your cv document path" download class="btn btn2">Download cv</a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="name" placeholder=" enter your name" required>
+          <input type="email" name="email" placeholder="enter your email" required>
+          <textarea name="message" rows="6" placeholder="your message"></textarea>
+          <button type="submit" class="btn btn2">submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>copyright <i class="fa-solid fa-heart"></i></p>
+  </div>
+</div>
+
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu(){
+        sidemenu.style.right="0";
+      }
+      function closemenu(){
+        sidemenu.style.right="-240px";
+      }
+    </script>
+<script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwCFtrHP29OwQJCgWjXfc8b2SYk4OhzzzkPnLbLukSVztprBUymC8J0qSiJweBUF9hZMA/exec'
+      const form = document.forms['submit-to-google-sheet']
+      constmsg = document.getElementById("msg")
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "message sent successfully"
+            setTimeout(function(){
+              msg.innerHTML = ""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+ </script>
+</body>
+</html>
